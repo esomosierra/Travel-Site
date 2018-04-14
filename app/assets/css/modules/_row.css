@@ -9,6 +9,11 @@
         &__medium-4--larger {
             width: 37%;
         }
+
+        &__medium-6 {
+            width: 50%;
+            float: left;
+        }
     
         &__medium-8 {
             float: left;
@@ -35,6 +40,14 @@
     }
     &--gutters > div { /* Targets the Direct Child Element DIV */
         padding-right: 65px;
+    }
+
+    &--gutters-large {
+        margin-right: -100px;
+    }
+
+    &--gutters-large > div { /* Targets the Direct Child Element DIV */
+        padding-right: 100px;
     }
 
     &__b-margin-until-medium {
