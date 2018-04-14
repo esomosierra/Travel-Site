@@ -1,0 +1,43 @@
+.row {
+    @mixin atMedium { /* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+        &__medium-4 {
+            float: left;
+            width: 33.33%;
+        }
+
+        &__medium-4--larger {
+            width: 37%;
+        }
+    
+        &__medium-8 {
+            float: left;
+            width: 66.66%
+        }
+
+        &__medium-8--smaller {
+            width: 63%;
+        }
+
+        &__b-margin-until-medium {
+            margin-bottom: 0
+        }
+
+    }
+
+    @mixin clearfix;
+
+    &--gutters {
+        /*  Remove the padding right 65px of the last column given to the direct child row--gutters > div. 
+            Set the outer parent "WRAPPER" container to overflow hidden.
+        */
+        margin-right: -65px;
+    }
+    &--gutters > div { /* Targets the Direct Child Element DIV */
+        padding-right: 65px;
+    }
+
+    &__b-margin-until-medium {
+        margin-bottom: 1rem;
+    }
+}

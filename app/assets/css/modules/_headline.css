@@ -1,0 +1,47 @@
+.headline {
+    font-weight: 300;
+    color: #mainBlue;
+    font-size: 1.9rem; /* Base: Mobile View Smaller Screen*/
+
+    @mixin atSmall { /* Min Width of 530px up to larger size */
+        font-size: 2.875rem;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--orange {
+        color: $mainOrange;
+
+    }
+
+    &--small {
+        font-size: 1.2rem; /* Base: Mobile View Smaller Screen*/
+
+        @mixin atSmall { /* Min Width of 530px up to larger size */
+            font-size: 1.875rem;
+        }
+    }
+
+    &--narrow {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    &--light {
+        font-weight: 100;
+    }
+
+    &--b--margin--small {
+        margin-bottom: .5em; /* Best practice to use "EM" for margin or padding that has "REM" font size set */
+    }
+
+    &--b--margin--large {
+        margin-bottom: 1.6em; /* Best practice to use "EM" for margin or padding that has "REM" font size set */
+    }
+
+    &--no-t-margin {
+        margin-top: 0;
+    }
+}

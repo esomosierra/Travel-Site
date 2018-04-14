@@ -1,0 +1,16 @@
+.generic-content-container {
+    
+    p {
+        line-height: 1.65;
+        margin: 1.8rem 0; /* Base: Mobile View Smaller screen size */
+
+        @mixin atSmall { /* Will take effect if screen has a Min Width of 530px up to larger screen size */
+            font-size: 1.125rem;
+        }
+    }
+
+    p a {
+        font-weight: 700;
+    }
+
+}

@@ -1,0 +1,22 @@
+.wrapper {
+    overflow: hidden;
+    padding: 0 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    &--medium {
+        max-width: 976px;
+    }
+
+    .wrapper { /* Offset to the parent wrapper */
+        padding: 0;
+    }
+
+    &--b-margin {
+        margin-bottom: 1rem; /* Base: Mobile View. Smaller Screen*/
+
+        @mixin atSmall { /* Will effect if Min Width is 530px up to larger size. */
+            margin-bottom: 3.875rem;
+        }
+    }
+}
