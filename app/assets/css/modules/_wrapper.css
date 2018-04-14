@@ -8,6 +8,22 @@
         max-width: 976px;
     }
 
+    &--no-padding-until-medium {
+        padding: 0; /* Base: Mobile View. Smaller Screen*/
+
+        @mixin atMedium { /* Will effect if Min Width is 800px up to larger size. */
+            padding: 0 20px; 
+        }
+    }
+
+    &--no-padding-until-large {
+        padding: 0; /* Base: Mobile View. Smaller Screen*/
+
+        @mixin atLarge { /* Will effect if Min Width is 800px up to larger size. */
+            padding: 0 20px; 
+        }
+    }
+
     .wrapper { /* Offset to the parent wrapper */
         padding: 0;
     }
