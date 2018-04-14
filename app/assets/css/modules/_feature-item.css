@@ -1,0 +1,33 @@
+.feature-item {
+    
+    position: relative;
+    padding-bottom: 2rem;
+
+    @mixin atSmall {
+        padding-left: 94px;
+    }
+
+    &__icon { /* Base: Mobile View. Smaller Screen */
+        display: block;
+        margin: 0 auto;
+
+        @mixin atSmall { /* Will effect on Min Width of 530px up to larger size */
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    &__title { /* Base: Mobile View. Smaller Screen */
+        font-size: 1.6rem;
+        font-weight: 300;
+        margin-bottom: .8rem;
+        margin-top: .7em;
+        text-align: center;
+        
+        @mixin atSmall { /* Will effect on Min Width of 530px up to larger size */
+            margin-top: 1em;
+            font-size: 1.875rem;
+            text-align: left;
+        }
+    }
+}
