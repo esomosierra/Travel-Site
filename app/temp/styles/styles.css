@@ -451,7 +451,7 @@ a {
 @media (min-width: 530px) {
 
 .btn {
-            font-size: 1.25rem /* Desktop, tablet view */
+            font-size: 1.25rem
 }
     }
 
@@ -483,7 +483,7 @@ a {
         padding: 0; /* Base: Mobile View. Smaller Screen*/
     }
 
-/* Will take effect if screen has a Min Width of 1200px up to larger screen size */
+/* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 
 @media (min-width: 1010px) {
 
@@ -559,11 +559,11 @@ a {
         background: #e0e6ef;
     }
 
-/* Will take effect if screen has a Min Width of 1200px up to larger screen size */
+/* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 
 @media (min-width: 1010px) {
 
-.page-section--testimonial { /* Will take effect if screen has a Min Width of 800px up to larger screen size */
+.page-section--testimonial { /* Will take effect if screen has a Min Width of 1010px up to larger screen size */
             background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
             background-size: cover
     }
@@ -664,11 +664,11 @@ a {
         }
     }
 
-/* Will take effect if screen has a Min Width of 1200px up to larger screen size */
+/* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 
 @media (min-width: 1010px) {
 
-.row { /* Will take effect if screen has a Min Width of 800px up to larger screen size */
+.row { /* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 }
 
         .row__large-4 {
@@ -752,7 +752,7 @@ a {
             display: flex;
         }
 
-/* Will take effect if screen has a Min Width of 1200px up to larger screen size */
+/* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 
 @media (min-width: 1010px) {
 
@@ -884,7 +884,7 @@ a {
     margin-bottom: 98px;
 }
 
-/* Will take effect if screen has a Min Width of 1200px up to larger screen size */
+/* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 
 @media (min-width: 1010px) {
 
@@ -923,4 +923,30 @@ a {
         font-weight: 400;
         font-size: 0.9375rem;
         margin: .25rem 0 1rem 0;
+    }
+
+.site-footer {
+    background-color: #2f5572;
+    color: #fff;
+    padding: .5rem;
+    text-align: center;
+
+    
+}
+
+.site-footer__text { /* Base: Mobile View. Smaller Screen */
+        display: block;
+        margin-bottom: 1rem;
+        font-weight: 200;
+    }
+
+/* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+@media (min-width: 800px) {
+
+.site-footer__text { /* Will effect on Min Width of 800px up to larger size */
+            display: inline;
+            margin-bottom: 0;
+            margin-right: 1.4rem
+    }
     }
