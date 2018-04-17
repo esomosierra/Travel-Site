@@ -30,7 +30,7 @@
 
     }
 
-    @mixin atLarge { /* Will take effect if screen has a Min Width of 800px up to larger screen size */
+    @mixin atLarge { /* Will take effect if screen has a Min Width of 1010px up to larger screen size */
 
         &__large-4 {
             float: left;
