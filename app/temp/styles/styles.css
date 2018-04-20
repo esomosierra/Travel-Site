@@ -368,7 +368,7 @@ a {
         display: block;
     }
 
-.large-hero__text-content {
+.large-hero__text-content { /* Base: Mobile View. Smaller Screen */
         position: absolute;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -376,13 +376,23 @@ a {
         left: 0;
         width: 100%;
         text-align: center;
+        padding-top: 88px;
     }
 
-.large-hero__title {
+/* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+@media (min-width: 800px) {
+
+.large-hero__text-content {
+            padding-top: 60px ; /* Will effect on Min Width of 800px up to larger size */
+    }
+    }
+
+.large-hero__title { /* Base: Mobile View. Smaller Screen */
         font-weight: 300;
         color: #2f5572;
         margin: 0;
-        font-size: 2.4rem; /* This is the MOBILE FIRST RESPONSIVE VIEW Base Font Size */
+        font-size: 2.4rem;
 
     }
 
@@ -391,7 +401,7 @@ a {
 @media (min-width: 530px) {
 
 .large-hero__title {
-            font-size: 4.8rem /* Desktop, tablet view */
+            font-size: 4.8rem /* Will effect on Min Width of 530px up to larger size */
 
     }
     }
@@ -923,6 +933,108 @@ a {
         font-weight: 400;
         font-size: 0.9375rem;
         margin: .25rem 0 1rem 0;
+    }
+
+.site-header {
+    padding: 10px 0;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+@media (min-width: 800px) {
+
+.site-header { /* Will effect on Min Width of 800px up to larger size */
+        background: rgba(47,85,114, .3)
+}
+    }
+
+.site-header__btn-container {
+        float: right;
+    }
+
+.site-header__logo { /* Base: Mobile View. Smaller Screen */
+        position: absolute;
+        background: #2f5572;
+        padding: 25px 36px;
+        top: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%) scale(.8);
+                transform: translateX(-50%) scale(.8);
+        -webkit-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+    }
+
+/* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+@media (min-width: 800px) {
+
+.site-header__logo { /* Will effect on Min Width of 800px up to larger size */
+            left: auto;
+            -webkit-transform: translateX(0);
+                    transform: translateX(0)
+    }
+    }
+
+.site-header__menu-content { /* Base: Mobile View. Smaller Screen */
+        display: none;
+    }
+
+/* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+@media (min-width: 800px) {
+
+.site-header__menu-content { /* Will effect on Min Width of 800px up to larger size */
+            display: block
+    }
+    }
+
+.site-header__menu-icon { /* Base: Mobile View. Smaller Screen */
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+/* Will take effect if screen has a Min Width of 800px up to larger screen size */
+
+@media (min-width: 800px) {
+
+.site-header__menu-icon { /* Will effect on Min Width of 800px up to larger size */
+            display: none
+    }
+    }
+
+.primary-nav--pull-right {
+        float: right;
+    }
+
+.primary-nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+.primary-nav ul::after { /* Ideal or Best Practice in clearing float element */
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+.primary-nav li {
+        list-style: none;
+        float: left;
+        padding-right: 20px;
+    }
+
+.primary-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300;
+        line-height: 47px;
     }
 
 .site-footer {
