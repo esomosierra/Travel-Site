@@ -11,6 +11,11 @@
 
     @mixin atMedium { /* Will effect on Min Width of 800px up to larger size */
         background: rgba($mainBlue, .3);
+        position: fixed;
+
+        &--dark {
+            background: rgba(23,51,72, .85);
+        }
     }
 
     &__btn-container { /* Base: Mobile View. Smaller Screen */
@@ -27,12 +32,17 @@
         padding: 25px 36px;
         top: 0;
         left: 50%;
+        transition: transform .3s ease-out;
         transform: translateX(-50%) scale(.8);
         transform-origin: 50% 0;
 
         @mixin atMedium { /* Will effect on Min Width of 800px up to larger size */
             left: auto;
             transform: translateX(0);
+
+            .site-header--dark & {
+                transform: scale(.57);
+            }
         }
     }
 
