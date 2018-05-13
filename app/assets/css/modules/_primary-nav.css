@@ -46,11 +46,16 @@
         padding: 5px 8px;
         font-size: .8rem;
         background: rgba($mainBlue, .7);
+        transition: all .3s ease-out;
 
         @mixin atMedium { /* Will effect on Min Width of 800px up to larger size */
             padding-right: 12px 0;
             font-size: 1rem;
             background: transparent;
+
+            &.is-current-link {
+                color: #fabb69;
+            }
         }
     }
 }
