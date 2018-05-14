@@ -8,6 +8,7 @@ class StickyHeader {
 
     constructor() {
 
+        this.lazyImages = $( '.lazyload' );
         this.siteHeader = $( '.site-header' );
         this.headerTriggerElement = $( '.large-hero__title' ); // <h1>Your Clarity</h1>
         this.pageSections = $( '.page-section' );
@@ -15,11 +16,18 @@ class StickyHeader {
         this.createHeaderWaypoint();
         this.createPageSectionWaypoints();
         this.addSmoothScrolling();
+        this.refreshWaypoints();
 
     }
 
 
     /** METHODS / FUNCTIONS HANDLERS */
+
+    refreshWaypoints() {
+        this.lazyImages.on( 'load', function() {
+            Waypoint.refreshAll();
+        } );
+    }
 
     addSmoothScrolling() {
         this.headerLinks.smoothScroll();
