@@ -1,0 +1,25 @@
+.social-icons {
+    text-align: center;
+
+    &__icon { /* Base: Small screen. Mobile view.*/
+        background: $mainOrange;
+        display: inline-block;
+        margin: 0 5px 5px 5px;
+        width: 33%;
+        height: 72px;
+        position: relative;
+
+        @mixin atSmall { /* Will take effect if screen has a Min Width of 530px up to larger screen size */
+            width: 72px;
+            margin: 0 5px;
+        }
+
+        .icon {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
